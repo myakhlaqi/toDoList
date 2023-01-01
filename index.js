@@ -11,7 +11,8 @@ const https = require('https');
 
 // var students=[]
 // mongoose.connect("mongodb://localhost:27017/todoListDB");
-mongoose.connect(process.env.MONGODB_URI)
+// mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect("mongodb+srv://yahya:84525111@cluster0.u8u9kye.mongodb.net/listDB?retryWrites=true&w=majority")
 
 const itemsSchema = new mongoose.Schema({
     name: {
