@@ -48,7 +48,7 @@ app.get('/', function (req, res) {
             // console.log('items', items);
             if (items.length) {
                 // itemList = items.map(x => x.name);
-                res.render('list', { listTitle: moment().format('D-MMMM-YYYY'), itemList: items })
+                res.render('index', { listTitle: moment().format('D-MMMM-YYYY'), itemList: items })
                 // console.log('itemList:', itemList);
             }
             else {
@@ -107,7 +107,7 @@ app.get('/:listName', function (req, res) {
                 res.redirect('/' + customListName);
             } else {
                 // console.log(list);
-                res.render('list', { listTitle: customListName, itemList: list.items });
+                res.render('index', { listTitle: customListName, itemList: list.items });
             }
         }
     })
