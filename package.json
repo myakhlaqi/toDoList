@@ -1,0 +1,37 @@
+{
+  "name": "mail-subescriber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon app.js",
+    "start" : "node app.js",
+    "mailjet": "node mailjet.js",
+    "list": "nodemon list.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myakhlaqi/mail_subscriber.git"
+  },
+  "author": "Mohammad Yahya Akhlaqi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myakhlaqi/mail_subscriber/issues"
+  },
+  "homepage": "https://github.com/myakhlaqi/mail_subscriber#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^6.8.0",
+    "node-mailjet": "^5.1.1",
+    "request": "^2.88.2"
+  }
+}
