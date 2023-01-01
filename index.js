@@ -4,6 +4,10 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const moment = require('moment');
+const PORT = process.env.PORT || 3000
+const MONGO_URI= process.env.MONGODB_URI
+
+
 mongoose.set('strictQuery', true);
 
 const defaultItemList = [{ name: "Apple" }, { name: "Banana" }, { name: "Mango" }, { name: "Orange" }];
@@ -12,7 +16,16 @@ const https = require('https');
 // var students=[]
 // mongoose.connect("mongodb://localhost:27017/todoListDB");
 // mongoose.connect(process.env.MONGODB_URI)
-mongoose.connect("mongodb+srv://yahya:84525111@cluster0.u8u9kye.mongodb.net/listDB?retryWrites=true&w=majority")
+// mongoose.connect("mongodb+srv://yahya:84525111@cluster0.u8u9kye.mongodb.net/listDB?retryWrites=true&w=majority")
+const connectDB = async () => {
+    try {
+      const conn = await mongoose.connect(MONGO_URI);
+      console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+      console.log(error);
+      process.exit(1);
+    }
+  }
 
 const itemsSchema = new mongoose.Schema({
     name: {
@@ -138,10 +151,11 @@ app.post("/", function (req, res) {
         });
     }
 
-
-
 });
 
-app.listen(process.env.PORT || 3001, () => {
-    console.log('server is running on port http://localhost:3001');
-});
+
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("listening for requests on port "+PORT+' .');
+    })
+})
