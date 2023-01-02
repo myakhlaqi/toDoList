@@ -13,10 +13,6 @@ mongoose.set('strictQuery', true);
 const defaultItemList = [{ name: "Welcome to your todolist!" }, { name: "Hit the + button to add a new item." }, { name: "<-- Hit this checkbox to delete an item." }];
 const https = require('https');
 
-// var students=[]
-// mongoose.connect("mongodb://localhost:27017/todoListDB");
-// mongoose.connect(process.env.MONGODB_URI)
-// mongoose.connect("mongodb+srv://yahya:84525111@cluster0.u8u9kye.mongodb.net/listDB?retryWrites=true&w=majority")
 const connectDB = async () => {
     try {
       const conn = await mongoose.connect(MONGO_URI);
