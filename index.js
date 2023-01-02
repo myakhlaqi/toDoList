@@ -10,7 +10,7 @@ const MONGO_URI= process.env.MONGODB_URI
 
 mongoose.set('strictQuery', true);
 
-const defaultItemList = [{ name: "Apple" }, { name: "Banana" }, { name: "Mango" }, { name: "Orange" }];
+const defaultItemList = [{ name: "Welcome to your todolist!" }, { name: "Hit the + button to add a new item." }, { name: "<-- Hit this checkbox to delete an item." }];
 const https = require('https');
 
 // var students=[]
