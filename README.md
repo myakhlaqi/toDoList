@@ -83,7 +83,9 @@ To run the application locally you type:
 
 ```
 npm run start
+```
 or
+```
 node index.js
 ```
 Open following link to see the web application:
@@ -103,7 +105,9 @@ To create a new list just add the list name to the url. For example to create a 
 
 ```
 http://localhost:3000/home
+```
 or
+```
 https://todolist-1m63.onrender.com/home
 
 ```
