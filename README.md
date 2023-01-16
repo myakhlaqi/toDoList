@@ -114,7 +114,11 @@ https://todolist-1m63.onrender.com/home
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+
+[![Deploy to Cyclic](https://deploy.cyclic.app/button.svg)](https://deploy.cyclic.app/)
+- Sets up instant continuous deployment on `git push`
+- Realtime backend logs and API request monitoring
+
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
